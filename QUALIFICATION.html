@@ -1,0 +1,1061 @@
+
+<!DOCTYPE HTML>
+
+<head>
+      <title>Vihanga Fernando </title>
+      <link rel="icon" type="image/x-icon" href="Main logo.ico">
+</head>
+<head>
+                            <meta charset="UTF-8">
+                            <meta name="keywords" content="HTML,css,javascript,php">
+                            <meta name="description" content="My first web site using html,css and javascript">
+                            <meta name="author" content="vihaga prebasha">
+                            <meta name="viewpoint" content="width=device-wider , intial-scale=1.0">
+
+
+
+ <style>
+
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 40px;
+        background-color: lightblue;
+
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+    }
+
+/* Desktop Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a:link{
+   link color: black; /*text-decoration: none;font-size:17px*/;
+}
+
+
+.nav-links a:visited{
+    color:black;
+}
+
+
+.nav-links a:hover{
+ color:red;
+}    
+
+.nav-links a:{
+ activecolor: orange;   
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+}
+
+/* Mbar Hidden on Desktop */
+.Mbar {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Mbar span {
+    height: 3px;
+    width: 28px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* ========== MOBILE VIEW ========== */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #8fb1bf;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s ease;
+    }
+
+    .nav-links.nav-active{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .Mbar {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* Active class */
+.nav-active {
+    display: flex !important;
+}                  
+.Mbar {
+    transition: transform 0.5s ease;
+}
+
+.Mbar.active {
+    transform: rotate(180deg);
+}
+
+
+
+</style>
+
+
+
+<style>
+
+/* ===== LUXURY BLACK BACKGROUND ===== */
+body{
+    min-height:100vh;
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a, #000000);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Subtle gold glow overlay */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: radial-gradient(circle at top left, rgba(212,175,55,0.08), transparent 60%);
+    pointer-events:none;
+}
+
+/*==========================================================================*/
+
+body{
+    position: relative;
+    margin: 40px;
+    border: 3px solid #d4af37;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        inset 0 0 25px rgba(212,175,55,0.3);
+}
+
+/* Inner luxury thin line */
+body:before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:1px solid rgba(212,175,55,0.6);
+    pointer-events:none;
+}
+
+#a{
+    border: 4px solid #d4af37;
+    padding: 10px;
+    background: #111;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        0 0 40px rgba(212,175,55,0.4);
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+/* Inner thin gold line */
+#a::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid rgba(212,175,55,0.5);
+}
+
+
+/*==========================================================================*/
+
+
+
+/* ===== GOLD NAVBAR ===== */
+.navbar{
+    background: #111 !important;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 8px 25px rgba(212,175,55,0.25);
+}
+
+/* ===== NAV LINKS GOLD STYLE ===== */
+.nav-links a{
+    color:#d4af37 !important;
+    letter-spacing:1px;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:white !important;
+    text-shadow:0 0 10px #d4af37;
+}
+
+/* ===== MOBILE MENU LUXURY STYLE ===== */
+@media (max-width:768px){
+    .nav-links{
+        background:#111 !important;
+        border-top:1px solid #d4af37;
+        box-shadow:0 10px 25px rgba(0,0,0,0.6);
+    }
+}
+
+/* Gold Hamburger Menu */
+.Mbar span{
+    background:#d4af37;
+}
+
+.home-hero{
+        margin:20px;
+}
+
+
+
+</style>
+
+
+
+
+
+     <nav class="navbar">
+         <div class="logo">
+               <a href="HOME.html" target="_self"><img src="Main logo 2.ico" alt="Logo"></a>
+         </div>
+                
+               <ul class="nav-links" id="navLinks">
+                        
+                       <li><a href="HOME.html" target="_self">HOME</a></li>
+                       <li><a href="QUALIFICATION.html" target="_self">QUALIFICATION</a></li>
+                       <li><a href="SKILLS.html" target="_self">SKILLS</a></li>
+                       <li><a href="SOCIAL MEDIA.html" target="_self">SOCIAL MEDIA</a></li>
+                       <li><a href="ABOUT.html" target="_self">ABOUT</a></li>
+                           
+              </ul>
+
+         </div>
+
+    <!-- Mbar -->
+    <div class="Mbar" id="Mbar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+
+
+     <hr style=" margin:5% auto; border: 1px solid black; margin-top: 0px; background: linear-gradient(to right, red, blue);">
+
+
+<script src="script.js"></script>
+
+
+
+
+<!--================Text,Image and Photos [Right-click disable , Image drag & drop block , Text selection disable]======-->
+
+<style>
+    body{
+       user-select: none;
+    }
+
+    img{
+       user-select: none;
+
+    }
+   
+    .securty{
+       pointer-events:auto;
+    }
+
+
+/*========================Only Mobile Security=====================================*/
+
+
+    img{
+        -webkit-user-drag: none;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    body{
+        -webkit-touch-callout: none; /* iPhone long press menu block */
+    }
+    
+    #a{
+       pointer-events:auto;
+    }
+/*==================================================================================*/
+
+
+</style>
+
+<script>
+    
+    document.addEventListener("dragstart", function(e){        /*Image drag & drop block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    });
+
+    
+
+    document.addEventListener("copy", function(e){             /*Image copy block (JS)*/
+        e.preventDefault();
+    });
+
+
+   
+    
+    document.addEventListener("keydown", function(e){          /*Screenshot block*/
+        if(e.key === "PrintScreen"){
+            alert("Screenshot disabled!");
+        }
+    });
+
+
+    
+    document.addEventListener("contextmenu", function(e){       /*Right-click disable*/
+        e.preventDefault();
+    });
+
+
+/*========================Only Mobile Security(JS)=====================================*/
+
+   
+    document.addEventListener("contextmenu", function(e){       /*Long-press (mobile) disable*/
+        e.preventDefault();
+    });
+
+
+    
+    document.addEventListener("touchstart", function(e){        /*Image drag + touch hold block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    }, {passive:false});
+
+
+
+/*========================Only Mobile Security(JS) End=====================================*/
+
+/*=====================Exra secutity(JS)===================================================*/
+
+
+    setInterval(function(){
+        if(window.outerWidth - window.innerWidth > 160){         /*DevTools detect (extra layer)*/
+            document.body.innerHTML = "";
+        }
+    }, 1000);
+
+   
+
+    /*window.addEventListener("blur", function(){ */                /*Blur screen when user switches focus*/
+        /*document.body.style.filter = "blur(20px)";
+    });*/
+
+    /*window.addEventListener("focus", function(){
+        document.body.style.filter = "blur(0)";
+    });*/
+
+
+
+   /*-document.addEventListener("visibilitychange", function(){ */      /*Visibility change detect*/
+
+        /*if(document.hidden){
+            document.body.style.filter = "blur(25px)";
+        }else{
+            document.body.style.filter = "blur(0)";
+        }
+
+    });*/
+
+
+    
+    document.addEventListener("keydown", function(e){      /*Keyboard shortcuts block*/
+
+        /* Ctrl + C */
+        if(e.ctrlKey && e.key === "c"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + S */
+        if(e.ctrlKey && e.key === "s"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + U (view source) */
+        if(e.ctrlKey && e.key === "u"){
+            e.preventDefault();
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+        }
+
+    });
+
+
+    
+    document.addEventListener("keydown", function(e){
+
+        /* Ctrl + U */
+        if(e.ctrlKey && (e.key === "u" || e.key === "U")){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        /* Ctrl + Shift + I */
+        if(e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")){
+            e.preventDefault();
+            return false;
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+            return false;
+        }
+
+    });
+
+
+    window.onkeydown = function(e){
+
+        if(e.ctrlKey && e.keyCode === 85){ // U
+            return false;
+        }
+
+        if(e.keyCode === 123){ // F12
+            return false;
+        }
+
+    };
+
+
+/*=====================Exra secutity(JS) End===================================================*/
+</script>
+
+
+
+
+</head>
+
+<!--===================================================END Security=========================================================-->
+
+
+
+
+</head>
+
+
+
+
+
+<style>
+
+/*@media (min-width: 768px) and (max-width: 1920px){*/
+
+.main-content{
+    padding: 100px;
+}
+  
+.content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.content-wrapper1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row-reverse;
+}
+
+
+.content-wrapper2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.content-wrapper3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row-reverse;
+
+}
+
+.content-wrapper4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+
+.text-content{
+    width: 55%;
+    margin-left: 20px;
+    text-indent: 60px;
+    text-align: right;
+    text-decoration-thickness: 5px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 7px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-family: arial,sans-serif;
+
+}
+
+.text-content1{
+    width: 55%;
+    margin-left: 20px;
+    text-indent: 60px;
+    text-align: left;
+    text-decoration-thickness: 5px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 7px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-family: arial,sans-serif;
+
+}
+
+
+.profile-img{
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.profile-img1{
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.profile-img2{
+    height: 70vh;
+    border-radius: 10px;
+    margin-right: 150px;
+}
+
+.profile-img3{
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.profile-img4{
+    height: 70vh;
+    border-radius: 10px;
+}
+
+
+#a:hover{
+    transform: scale(1.01);
+}
+
+
+
+
+/*  Screen eka podi unama */
+@media (max-width: 768px){
+
+    .content-wrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .content-wrapper1{
+        flex-direction: column-reverse;
+        text-align: center;
+
+    }
+
+     .content-wrapper2{
+        flex-direction: column-reverse;
+        text-align: center;
+
+    }
+
+    .content-wrapper3{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .content-wrapper4{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .text-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-content1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-img{
+        height: 40vh;
+    }
+
+    .profile-img1{
+        height: 40vh;
+    }
+
+    .profile-img2{
+        height: 40vh;
+        margin-left: 170px;
+    }
+
+    .profile-img3{
+        height: 40vh;
+    }
+
+    .profile-img4{
+        height: 40vh;
+    }
+}
+</style>
+
+
+
+
+<!--=====================================================Backgruod animtion CSS code============================================================-->
+
+
+
+<style>
+
+
+body{                                                   /* background animation */
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+    }
+
+    /* particles background */
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    }
+
+</style>
+
+
+<!--=================================================Backgruod animtion CSS code End============================================================-->
+
+
+
+<!--=========================================================Body Content=====================================================================-->
+
+                                                                                    <!-- OL QUALIFICATION -->
+                                                                                    <!-- main-content -->
+                                                                                    <!-- content-wrapper -->
+                                                                                    <!-- text-content -->
+                                                                                    <!-- profile-img -->
+<body>
+
+    <div id="particles-js"></div>
+
+<div class="main-content">
+
+    <div class="content-wrapper">
+
+        <div class="text-content">
+            <p>
+               I successfully completed my G.C.E. Ordinary Level examination with strong academic performance while currently pursuing my Advanced Level studies in the Mathematics stream. I achieved four A passes, two B passes, and two C passes, reflecting a balanced and consistent academic record. I obtained B grades in Mathematics and Information & Communication Technology (ICT), demonstrating my strength in analytical thinking and technical subjects, which align closely with my future academic and career aspirations. Additionally, I earned C passes in English and Science, further strengthening my foundation in communication and scientific knowledge. I secured A passes in Sinhala, History, Civic Education, and Buddhism, highlighting my competence in humanities and social studies as well. These results showcase my dedication, discipline, and well-rounded academic capability across both technical and theoretical subjects.<br>
+            </p>
+        </div>
+
+               <img src="other 2.png" class="profile-img" id="a">
+
+    </div>
+
+</div>
+
+
+
+                                                                                    <!-- Daham Pasal QUALIFICATION -->
+                                                                                    <!-- main-content -->
+                                                                                    <!-- content-wrapper1 -->
+                                                                                    <!-- text-content1 -->
+                                                                                    <!-- profile-img1 -->
+
+<div class="main-content">                                                                
+
+    <div class="content-wrapper1">
+
+        <div class="text-content1">
+            <p>
+                Alongside my formal school education, I have actively engaged in Daham Pasal education, strengthening my understanding of Buddhist philosophy, culture, and moral values. Throughout my participation in the YMB examinations, I achieved a General Pass in 2018 and further progressed to obtain Distinction passes in both 2019 and 2023, demonstrating continuous improvement and dedication to religious studies. In addition, I successfully completed the Daham Pasal Final Certificate Examination – 2024 (2025), earning a Distinction pass in Life of the Buddha and Buddhist Culture, a Credit pass in History of the Sasana, and a Simple pass in Buddhism and Pali Language Practice. These achievements reflect not only my academic commitment but also my strong moral foundation, discipline, and respect for cultural and spiritual values, which continue to guide my personal growth and character development.<br>
+            </p>
+
+        </div>
+
+                 <img src="daham pasal .png" class="profile-img1" id="a" class="securty">
+
+    </div>
+
+
+
+
+
+
+
+                                                                               <!-- LEDER SHIP QUALIFICATION -->
+                                                                               <!-- main-content -->
+                                                                               <!-- content-wrapper2 -->
+                                                                               <!-- text-content -->
+                                                                               <!-- profile-img2 -->
+
+</div>
+
+
+<div class="main-content">
+
+    <div class="content-wrapper2">
+
+        <div class="text-content">
+            <p><p>During my school career at Sri Rahula Maha Vidyalaya, I have been privileged to take on several significant leadership roles that have shaped my character and strengthened my sense of responsibility. In 2024, I proudly served as the Head Prefect (HP) of the school, a position that required discipline, integrity, and the ability to lead by example. As Head Prefect, I worked closely with the school administration, teachers, and fellow students to maintain discipline, organize school activities, and ensure a positive and respectful school environment. This role enhanced my communication skills, decision-making abilities, and confidence in handling responsibilities under pressure.</p><br>
+
+            <p>In addition to my role as Head Prefect, I also served as the Chairman of the Sahithya Sangamaya (Literary Association), where I led and coordinated literary and cultural activities within the school. My leadership contributions were recognized when I was honored with the prestigious “Student of the Year 2024” award at Sri Rahula Maha Vidyalaya. Furthermore, I have taken on responsibilities as a class leader and actively provided leadership in various group projects and school activities. These experiences have helped me develop teamwork, organizational skills, and the ability to inspire and guide others toward achieving common goals.</p>
+            </p>
+
+
+         </div>    <img src="hp.png" class="profile-img2" id="a" ;>
+
+    </div>
+
+</div>
+
+
+
+
+  
+                                                                                    <!-- Sport QUALIFICATION -->
+                                                                                    <!-- main-content -->
+                                                                                    <!-- content-wrapper3 -->
+                                                                                    <!-- text-content1 -->
+                                                                                    <!-- profile-img3 -->
+
+<div class="main-content">
+
+    <div class="content-wrapper3">
+
+        <div class="text-content1" >
+            <p>
+                <p>Throughout my school career at Sri Rahula Maha Vidyalaya, I have actively participated in athletics and team sports, demonstrating dedication, discipline, and competitive spirit. My main athletic events have been Shot Put, Javelin Throw, and Discus Throw, where I consistently improved my performance over the years. At the Inter-House Sports Meet, I achieved 3rd place in Shot Put (2020), advanced to 2nd place in Shot Put (2023), and proudly secured 1st place in Shot Put (2024). In 2024, I further strengthened my achievements by winning 1st place in Discus Throw and 2nd place in Javelin Throw. These accomplishments reflect my continuous effort, resilience, and commitment to personal improvement in athletics.</p><br>
+
+                <p>In addition to individual events, I have also excelled in team sports. I was part of the champion team in Elle for three consecutive years (2018, 2019, and 2020), demonstrating strong teamwork and collaboration skills. Furthermore, in 2023, I had the honor of serving as the Under-16 Volleyball Captain, where I led the team with responsibility and motivation, fostering unity and sportsmanship among players. Through these sporting experiences, I have developed leadership qualities, perseverance, time management skills, and the ability to perform effectively under competitive pressure.</p>
+            </p>
+        </div>
+
+                <img src="sport.png" class="profile-img3 " id="a">
+
+    </div>
+
+</div>
+
+
+
+                                                                                    <!-- Other QUALIFICATION -->
+                                                                                    <!-- main-content -->
+                                                                                    <!-- content-wrapper4 -->
+                                                                                    <!-- text-content -->
+                                                                                    <!-- profile-img4 -->
+
+
+<div class="main-content">
+
+    <div class="content-wrapper4">
+
+        <div class="text-content">
+            <p>
+               In addition to my academic and leadership achievements, I have actively pursued creative and innovative activities that reflect my diverse talents and interests. With a strong passion for scientific innovation and practical experimentation, I participated in the MJF Science Exhibition – 2022, where I was awarded a certificate in recognition of my contribution and performance. This experience enhanced my creativity, problem-solving abilities, and interest in applied science. Furthermore, I have demonstrated artistic talent in visual arts, particularly in drawing and painting, and achieved 2nd Place at the Zonal Level (Kalapa) Art Competition in 2024. Alongside these accomplishments, I have earned several other certificates through active participation in various academic and extracurricular activities. These experiences highlight my versatility, creativity, and commitment to continuous self-development beyond the classroom. 
+            </p>
+       </div>
+
+               <img src="other.png" class="profile-img4" id="a">
+
+    </div>
+
+</div>
+
+<!--===========================================================Body Content End=================================================================-->
+
+
+
+<!--=====================================================Backgruod animtion JS code=============================================================-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+
+    particles:{
+
+    number:{value:60},
+
+    color:{value:"#D4AF37"},
+
+    shape:{type:"circle"},
+
+    opacity:{value:0.5},
+
+    size:{value:3},
+
+    move:{speed:1}
+
+    }
+});
+
+</script>
+
+<!--=====================================================Backgruod animtion JS code END=========================================================-->
+
+
+
+<!--=====================================================Social media icons======================================================================-->
+
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rows{
+    display: flex;
+    justify-content: center;   /* center ekata gannawa */
+    margin-top: 20px;
+}
+
+.nav-links1{
+    display: flex;
+    list-style: none;
+    gap: 40px;                 /* icon athara space */
+    align-items: center;
+}
+
+.nav-links1 li img{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.nav-links1 li img:hover{
+    transform: scale(1.1);     /* hover effect */
+}
+
+@media (max-width: 768px){
+
+    .nav-links1{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+    .nav-links1 li img{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+</style>
+
+
+<style>
+
+    hr{
+      margin:-20px auto; 
+      border: 1px solid black blue;
+      background: linear-gradient(to right, red, blue); 
+      width: 600px;
+      align:center;
+      }
+
+
+
+@media(max-width:768px){
+    hr{
+      margin:-20px auto;
+      max-width: 160px; 
+      border:  solid black blue;
+      /*background: linear-gradient(to right, red, blue);*/
+      background-color: blue; 
+      width: 600px;
+      align:center;                                                                                 
+      }
+    
+}
+
+
+
+
+</style>
+
+
+<hr>
+   </hr>
+
+
+<br><br><br>
+
+
+<div class="rows">
+    <ul class="nav-links1">
+
+        <li>
+            <a href="https://www.youtube.com/channel/UCvKT6kF8P-Lq5AlGDDDvbVQ" target="_blank">
+                <img src="YT.ico" alt="YouTube" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="W.ico" alt="WhatsApp" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://facebook.com/" target="_blank">
+                <img src="FB.ico" alt="Facebook" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://tiktok.com/" target="_blank">
+                <img src="TT.ico" alt="TikTok" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<br><br>  
+
+
+<!--================================================Social media icons END=======================================================================-->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

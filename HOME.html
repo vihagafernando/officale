@@ -1,0 +1,1292 @@
+<!DOCTYPE HTML>
+<head>
+      <title>Vihanga Fernando </title>
+      <link rel="icon" type="image/x-icon" href="Main logo.ico">
+</head>
+<head>
+                            <meta charset="UTF-8">
+                            <meta name="keywords" content="HTML,css,javascript,php">
+                            <meta name="description" content="My first web site using html,css and javascript">
+                            <meta name="author" content="vihaga prebasha">
+                            <meta name="viewpoint" content="width=device-wider , intial-scale=1.0">
+
+<style>
+    
+
+    <style>
+
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: lightblue;
+
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Desktop Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a:link{
+       link color: black; /*text-decoration: none;font-size:17px*/;
+}
+     
+
+.nav-links a:visited{
+        color:black;
+}
+     
+
+ .nav-links a:hover{
+         color:red;
+ }    
+
+ .nav-links a:{
+         activecolor: orange;   
+}
+
+
+
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+}
+
+/* Mbar Hidden on Desktop */
+.Mbar {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Mbar span {
+    height: 3px;
+    width: 28px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* ========== MOBILE VIEW ========== */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #8fb1bf;
+        width: 100%;
+        flex-direction: column;
+        flex-direction- scale:50% ;
+        align-items: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s ease;
+    }
+
+
+    .nav-links.nav-active{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .Mbar {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+}
+
+/* Active class */
+.nav-active {
+    display: flex !important;
+}                  
+.Mbar {
+    transition: transform 0.5s ease;
+}
+
+.Mbar.active {
+    transform: rotate(180deg);
+}
+
+
+
+</style>
+<style>
+    @media (max-width:768px){
+
+    .nav-links{
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+}
+
+
+     .nav-links{
+         z-index: 999;
+}
+    
+
+
+
+</style>
+
+
+
+<style>
+
+/* ===== LUXURY BLACK BACKGROUND ===== */
+body{
+    min-height:100vh;
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a, #000000);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Subtle gold glow overlay */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: radial-gradient(circle at top left, rgba(212,175,55,0.08), transparent 60%);
+    pointer-events:none;
+}
+
+/*===========================================================================*/
+
+body{
+    position: relative;
+    margin: 40px;
+    border: 3px solid #d4af37;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        inset 0 0 25px rgba(212,175,55,0.3);
+}
+
+/* Inner luxury thin line */
+body:before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:1px solid rgba(212,175,55,0.6);
+    pointer-events:none;
+}
+
+#a{
+    border: 4px solid #d4af37;
+    padding: 10px;
+    background: #111;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        0 0 40px rgba(212,175,55,0.4);
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+/* Inner thin gold line */
+#a::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid rgba(212,175,55,0.5);
+}
+
+#a:hover{
+    transform: scale(1.01);
+    box-shadow:
+        0 0 30px rgba(212,175,55,0.9),
+        0 0 60px rgba(212,175,55,0.6);
+}
+
+
+/*===========================================================================*/
+
+/* ===== GOLD NAVBAR ===== */
+.navbar{
+    background: #111 !important;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 8px 25px rgba(212,175,55,0.25);
+}
+
+/* ===== NAV LINKS GOLD STYLE ===== */
+.nav-links a{
+    color:#d4af37 !important;
+    letter-spacing:1px;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:white !important;
+    text-shadow:0 0 10px #d4af37;
+}
+
+/* ===== MOBILE MENU LUXURY STYLE ===== */
+@media (max-width:768px){
+    .nav-links{
+        background:#111 !important;
+        border-top:1px solid #d4af37;
+        box-shadow:0 10px 25px rgba(0,0,0,0.6);
+    }
+
+
+      /* Gold Hamburger Menu */
+    .Mbar span{
+        background:#d4af37;
+
+    }
+
+    .home-hero{
+        margin:20px;
+}
+
+
+
+</style>
+
+
+
+
+
+     <nav class="navbar">
+         <div class="logo">
+               <a href="HOME.html" target="_self"><img src="Main logo 2.ico" alt="Logo" class="securty"></a>
+         </div>
+                
+               <ul class="nav-links" id="navLinks">
+                        
+                       <li><a href="HOME.html" target="_self">HOME</a></li>
+                       <li><a href="QUALIFICATION.html" target="_self">QUALIFICATION</a></li>
+                       <li><a href="SKILLS.html" target="_self">SKILLS</a></li>
+                       <li><a href="SOCIAL MEDIA.html" target="_self">SOCIAL MEDIA</a></li>
+                       <li><a href="ABOUT.html" target="_self">ABOUT</a></li>
+                           
+              </ul>
+
+         </div>
+
+    <!-- Mbar -->
+    <div class="Mbar" id="Mbar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+
+
+     <hr style=" margin:5% auto; border: 1px solid black; margin-top: 0px; background: linear-gradient(to right, red, blue);">
+
+
+<script src="script.js"></script>
+
+
+
+
+
+<!--================Text,Image and Photos [Right-click disable , Image drag & drop block , Text selection disable]======-->
+
+<style>
+    body{
+       user-select: none;
+    }
+
+    img{
+       user-select: none;
+
+    }
+   
+    .securty{
+       pointer-events:auto;
+    }
+
+    .profile-img{
+        position: relative;
+    }
+
+    .profile-img::after{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+
+/*========================Only Mobile Security=====================================*/
+
+
+    img{
+        -webkit-user-drag: none;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    body{
+        -webkit-touch-callout: none; /* iPhone long press menu block */
+    }
+    
+    .securty{
+       pointer-events:auto;
+    }
+/*==================================================================================*/
+
+
+</style>
+
+<script>
+    
+    document.addEventListener("dragstart", function(e){        /*Image drag & drop block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    });
+
+    
+
+    document.addEventListener("copy", function(e){             /*Image copy block (JS)*/
+        e.preventDefault();
+    });
+
+
+   
+    
+    document.addEventListener("keydown", function(e){          /*Screenshot block*/
+        if(e.key === "PrintScreen"){
+            alert("Screenshot disabled!");
+        }
+    });
+
+
+    
+    document.addEventListener("contextmenu", function(e){       /*Right-click disable*/
+        e.preventDefault();
+    });
+
+
+/*========================Only Mobile Security(JS)=====================================*/
+
+   
+    document.addEventListener("contextmenu", function(e){       /*Long-press (mobile) disable*/
+        e.preventDefault();
+    });
+
+
+    
+    document.addEventListener("touchstart", function(e){        /*Image drag + touch hold block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    }, {passive:false});
+
+
+
+/*========================Only Mobile Security(JS) End=====================================*/
+
+/*=====================Exra secutity(JS)===================================================*/
+
+
+    setInterval(function(){
+        if(window.outerWidth - window.innerWidth > 160){         /*DevTools detect (extra layer)*/
+            document.body.innerHTML = "";
+        }
+    }, 1000);
+
+   
+
+    window.addEventListener("blur", function(){                 /*Blur screen when user switches focus*/
+        document.body.style.filter = "blur(20px)";
+    });
+
+    window.addEventListener("focus", function(){
+        document.body.style.filter = "blur(0)";
+    });
+
+
+
+    document.addEventListener("visibilitychange", function(){       /*Visibility change detect*/
+
+        if(document.hidden){
+            document.body.style.filter = "blur(25px)";
+        }else{
+            document.body.style.filter = "blur(0)";
+        }
+
+    });
+
+
+    
+    document.addEventListener("keydown", function(e){      /*Keyboard shortcuts block*/
+
+        /* Ctrl + C */
+        if(e.ctrlKey && e.key === "c"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + S */
+        if(e.ctrlKey && e.key === "s"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + U (view source) */
+        if(e.ctrlKey && e.key === "u"){
+            e.preventDefault();
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+        }
+
+    });
+
+
+    
+    document.addEventListener("keydown", function(e){
+
+        /* Ctrl + U */
+        if(e.ctrlKey && (e.key === "u" || e.key === "U")){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        /* Ctrl + Shift + I */
+        if(e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")){
+            e.preventDefault();
+            return false;
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+            return false;
+        }
+
+    });
+
+
+    window.onkeydown = function(e){
+
+        if(e.ctrlKey && e.keyCode === 85){ // U
+            return false;
+        }
+
+        if(e.keyCode === 123){ // F12
+            return false;
+        }
+
+    };
+
+
+/*=====================Exra secutity(JS) End===================================================*/
+</script>
+
+
+
+
+</head>
+
+<!--===================================================END Security=========================================================-->
+
+
+
+
+
+
+<!--================================================Main contend Agetsment CSS code ===============================================-->
+
+
+<style>
+
+/*@media (min-width: 768px) and (max-width: 1920px){*/
+
+    .main-content{
+        padding: 100px;
+    }
+
+    .content-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+
+
+    .text-content{
+        width: 55%;
+        margin-left: 20px;
+        text-indent: 60px;
+        text-align: left;
+        text-decoration-thickness: 5px;
+        font-style: italic;
+        font-variant: small-caps;
+        font-weight: 7px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-family: arial,sans-serif;
+
+    }
+
+
+
+
+    .profile-img{
+        height: 70vh;
+        border-radius: 10px;
+    }
+
+
+
+    #a:hover{
+        transform: scale(1.01);
+    }
+
+
+
+
+/*  Screen eka podi unama */
+@media (max-width: 768px){
+
+    .content-wrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+}
+
+.profile-img{
+    height: 40vh;
+}
+
+}
+
+
+
+</style>
+
+
+
+                                              <!--  main contend eazzy -->
+
+<style>
+  
+    .content-wrapper{                                           
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        flex-direction: row-reverse;
+    }
+
+    .text-content{
+        width: 55%;
+    }
+
+    .profile-img{
+        height: 50vh;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+
+    @media (max-width: 768px){
+
+        .content-wrapper{
+            flex-direction: column-reverse;
+            text-align:left ;
+        }
+
+        .text-content{
+            width: 100%;
+        }
+
+        .profile-img{
+            height: 40vh;   
+        }
+
+        
+    }      
+
+</style>
+
+<!--=================================================Main contend Agetsment Css code End=========================================-->
+
+
+<!--=========================================================HOME PAGE SPECIAL LOOK===============================================-->
+<style>
+
+    .home-hero{
+        position:relative;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url(https://images.unsplash.com/photo-1572557798994-41431698dc8d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size:cover;
+        background-position:center;
+    }
+
+    .home-overlay{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background: radial-gradient(circle at center, rgba(212,175,55,0.15), transparent 60%);
+    }
+
+    .home-center{
+        position:relative;
+        z-index:2;
+        animation: fadeUp 1.5s ease forwards;
+    }
+
+    .home-title{
+        font-size:60px;
+        color:#d4af37;
+        letter-spacing:4px;
+        text-shadow:0 0 20px rgba(212,175,55,0.6);
+    }
+
+    .home-sub{
+        margin-top:20px;
+        font-size:20px;
+        color:#eee;
+        letter-spacing:3px;
+    }
+
+    .home-btn{
+        display:inline-block;
+        margin-top:40px;
+        padding:14px 45px;
+        border:2px solid #d4af37;
+        color:#d4af37;
+        text-decoration:none;
+        font-weight:bold;
+        letter-spacing:2px;
+        transition:0.4s ease;
+    }
+
+    .home-btn:hover{
+        background:#d4af37;
+        color:black;
+        box-shadow:0 0 25px #d4af37;
+    }
+
+/* Smooth fade animation */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .home-hero{
+        min-height:100vh;
+        height:auto;
+        padding:120px 20px;   
+    }
+
+    .home-title{
+        font-size:32px;
+    }
+
+    .home-sub{
+        font-size:16px;
+    }
+    
+    .text-content{
+        width:100%;
+        text-align:center !important;
+        margin-left:0 !important;
+        text-indent:0 !important;
+    }
+
+    .content-wrapper{
+        align-items:center !important;
+        justify-content:center !important;
+    }
+
+
+
+
+}
+
+</style>
+
+<!--=========================================================HOME PAGE SPECIAL LOOK End=========================================-->   
+
+<!--===================================================Loader animashtion Css Code==============================================-->
+                                                 <!--Loader animaishion-->
+<style>
+
+/* Loader Screen */
+.loader{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: #081f3f;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Animated Text */
+.loading-text{
+    font-style: italic;
+    font-family: "Sofia", sans-serif;;
+    font-size: 100px;
+    font-weight:  italic;
+    color: white;
+    letter-spacing: 3px;
+    animation: textAnimation 2s ease 3;
+}
+
+.main-content{
+    display:none;
+        /*text-align:center;
+        margin-top:200px;*/
+    }
+
+    .loader{
+        z-index: 9999;
+
+
+        -@keyframes textAnimation{
+            0%{
+              opacity: 0;
+              transform: translateY(50px);
+          }
+          50%{
+              opacity: 1;
+              transform: translateY(0px);
+          }
+          100%{
+              opacity: 0;
+              transform: translateY(-50px);
+          } 
+      }
+
+      /* Hide main content first */
+
+
+  </style>
+
+<!--===================================================Loader animashtion Css Code End============================================-->
+
+
+<!--================================================Luxury Loader Background JS Code===============================================-->
+
+
+<script>
+    window.addEventListener("load", function(){                                       
+        setTimeout(function(){
+            document.querySelector(".loader").style.display="none";
+            document.querySelector(".main-content").style.display="block";
+    }, 2000); // 2 seconds
+    });
+</script>
+
+<!--===================================Luxury Loader Background JS Code End=======================================================-->
+
+
+
+<!--======================================Luxury Loader Background CSS Code=======================================================-->
+
+<style>
+   .loader{
+       background: radial-gradient(circle at center, #111 0%, #000 70%);
+       overflow:hidden;
+    }
+
+/* Gold glow animation */
+   .loading-text{
+       font-family: 'Times New Roman', serif;
+       color:#d4af37;
+       text-shadow: 
+          0 0 10px rgba(212,175,55,0.8),
+          0 0 20px rgba(212,175,55,0.6),
+          0 0 40px rgba(212,175,55,0.4);
+       animation: luxuryText 2s ease 3;
+    }
+
+/* Smooth luxury animation */
+   @keyframes luxuryText{
+       0%{
+          opacity:0;
+          transform:scale(0.8);
+          letter-spacing:10px;
+       }
+       50%{
+          opacity:1;
+          transform:scale(1.1);
+          letter-spacing:5px;
+       }
+       100%{
+          opacity:0;
+          transform:scale(0.9);
+          letter-spacing:8px;
+       }
+   }
+
+/* Gold rotating ring effect */
+    .loader::after{
+       content:"";
+       position:absolute;
+       width:220px;
+       height:220px;
+       border:3px solid rgba(212,175,55,0.3);
+       border-top:3px solid #d4af37;
+       border-radius:50%;
+       animation:spin 2s linear infinite;
+    }
+
+    @keyframes spin{
+       0%{ transform:rotate(0deg); }
+       100%{ transform:rotate(360deg); }
+    }
+
+</style>
+
+<!--=============================================Luxury Loader Background CSS Code End===============================================-->
+
+
+
+<!--============================================Loader text,image bar=================================================================-->
+
+                                                           <!-- Loader text,image bar akka -->
+
+
+<div class="loader">
+    <div class="loading-text">VF</div>
+
+        <!--<div class="loading-image"><img src="icon cricle.ico" alt="Logo" class="logo" style="margin-top: 600px; margin-left: -300px; width: 100px; height: 100;"></div>-->
+
+</div>
+<!--=========================================================Loader text,image bar===================================================-->
+
+
+
+<!--==========================================Backgruod animtion CSS code============================================================-->
+<style>
+    body{                                                   /* background animation */
+        background:#000;
+        color:white;
+        overflow-x:hidden;
+    }
+
+    /* particles background */
+
+    #particles-js{
+        position:fixed;
+        width:100%;
+        height:100%;
+        z-index:-1;
+    }
+
+   body{
+    user-select: none;
+}
+
+
+
+</style>
+
+<!--=================================================Backgruod animtion CSS code End=====================================================-->
+
+
+
+
+<!--=====================================================Body Content=====================================================================-->
+
+                                                    <!--Main content-->
+
+<body>
+
+    <div id="particles-js"></div>
+           
+<div class="main-content">
+
+    <section class="home-hero">
+          <div class="home-overlay"></div>
+
+              <div class="home-center">
+
+                    <div class="content-wrapper">
+
+                            <div class="text-content">
+
+                                  <p class="home-sub" style="text-align: center;">
+                                    <p>My name is K.Vihanga Prabhasha Dharmasri Fernando, a dedicated Advanced Level student from Sri Lanka with a strong academic background and a clear career vision. I am highly motivated, disciplined, and committed to continuous learning and personal development.</p>
+
+                                    <p>I began my education at Sri Rahula Maha Vidyalaya, where I developed a solid academic foundation and strong moral values. I later continued my secondary education at Moratu Maha Vidyalaya (MMV), Moratuwa, further strengthening my academic performance and leadership qualities.</p>
+
+                                    <p>I successfully completed my G.C.E. Ordinary Level examination with commendable results, achieving 4 A passes, 2 B passes, and 3 C passes. Additionally, I completed my Daham Pasal final examination with 2 Distinctions, 1 Credit, and 1 Simple pass, reflecting both academic capability and commitment to religious education.</p>
+
+                                    <p>Currently, I am pursuing my G.C.E. Advanced Level studies in the Mathematics stream. My academic focus has enhanced my analytical thinking, logical reasoning, and problem-solving abilities—skills that are essential in the field of technology and data analysis.</p>
+
+                                    <p>My long-term career objective is to become a Data Scientist. I am deeply interested in data analytics, artificial intelligence, and emerging technologies. I aspire to leverage data-driven insights to solve real-world problems and contribute meaningfully to innovation and digital transformation.</p>
+
+                                    <p>Beyond academics, I actively engage in cricket, which has helped me develop teamwork, discipline, and leadership skills. In addition, I am passionate about coding and continuously improving my programming knowledge to build a strong technical foundation for my future career.</p>
+
+                                    <p>I am determined, goal-oriented, and committed to achieving excellence in both my academic and professional journey.</p>
+                                </p>
+                           </div>
+
+                         <img src="Main photo.jpeg" class="profile-img" id="a" alt="PHOTO" title="Vihaga Fernando"  >
+       
+                   </div>
+            </div>
+    </section>
+
+</div>
+<!--=================================================Body Content End=================================================================-->
+
+
+
+<!--============================================Backgruod animtion JS code=============================================================-->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+    particlesJS("particles-js",{
+
+        particles:{
+
+            number:{value:60},
+
+            color:{value:"#D4AF37"},
+
+            shape:{type:"circle"},
+
+            opacity:{value:0.5},
+
+            size:{value:3},
+
+            move:{speed:1}
+
+        }
+    });
+
+</script>
+
+<!--===========================================Backgruod animtion JS code END=========================================================-->
+
+
+
+<!--=========================================Social media icons=====================================================================-->
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .rows{
+        display: flex;
+        justify-content: center;   /* center ekata gannawa */
+        margin-top: 20px;
+    }
+
+    .nav-links1{
+        display: flex;
+        list-style: none;
+        gap: 40px;                 /* icon athara space */
+        align-items: center;
+    }
+
+    .nav-links1 li img{
+        width: 50px;
+        height: 50px;
+        transition: 0.3s;
+    }
+
+    .nav-links1 li img:hover{
+        transform: scale(1.1);     /* hover effect */
+    }
+
+    @media (max-width: 768px){
+
+
+        .nav-links1{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+
+            .nav-links1 li img{
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+
+</style>
+
+<style>
+
+    hr{
+      margin:-20px auto; 
+      border: 1px solid black blue;
+      background: linear-gradient(to right, red, blue); 
+      width: 600px;
+      align:center;
+  }
+
+
+
+  @media(max-width:768px){
+    hr{
+      margin:-20px auto;
+      max-width: 160px; 
+      border:  solid black blue;
+      /*background: linear-gradient(to right, red, blue);*/
+      background-color: blue; 
+      width: 600px;
+      align:center;                                                                                 
+  }
+
+}
+
+
+
+
+</style>
+
+
+<hr>
+   </hr>
+
+
+<br><br><br>
+
+
+<div class="rows">
+    <ul class="nav-links1">
+
+        <li>
+            <a href="https://www.youtube.com/channel/UCvKT6kF8P-Lq5AlGDDDvbVQ" target="_blank">
+                <img src="YT.ico" alt="YouTube" style="border-radius: 5000px;" class="securty" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="W.ico" alt="WhatsApp" style="border-radius: 5000px;" class="securty" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://facebook.com/" target="_blank">
+                <img src="FB.ico" alt="Facebook" style="border-radius: 5000px;" class="securty" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://tiktok.com/" target="_blank">
+                <img src="TT.ico" alt="TikTok" style="border-radius: 5000px;" class="securty" id="a">
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<br><br>  
+
+</body>
+
+
+<!--==============================================Social media icons END===============================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

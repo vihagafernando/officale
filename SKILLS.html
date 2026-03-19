@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML>
+<head>
+      <title>Vihanga Fernando </title>
+      <link rel="icon" type="image/x-icon" href="Main logo.ico">
+</head>
+<head>
+                            <meta charset="UTF-8">
+                            <meta name="keywords" content="HTML,css,javascript,php">
+                            <meta name="description" content="My first web site using html,css and javascript">
+                            <meta name="author" content="vihaga prebasha">
+                            <meta name="viewpoint" content="width=device-wider , intial-scale=1.0">
+
+<style>
+    
+
+    <style>
+
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: lightblue;
+
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Desktop Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a:link{
+       link color: black; /*text-decoration: none;font-size:17px*/;
+}
+     
+
+.nav-links a:visited{
+        color:black;
+}
+     
+
+ .nav-links a:hover{
+         color:red;
+ }    
+
+ .nav-links a:{
+         activecolor: orange;   
+}
+
+
+
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+}
+
+/* Mbar Hidden on Desktop */
+.Mbar {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Mbar span {
+    height: 3px;
+    width: 28px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* ========== MOBILE VIEW ========== */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #8fb1bf;
+        width: 100%;
+        flex-direction: column;
+        flex-direction- scale:50% ;
+        align-items: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s ease;
+    }
+
+
+    .nav-links.nav-active{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .Mbar {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+}
+
+/* Active class */
+.nav-active {
+    display: flex !important;
+}                  
+.Mbar {
+    transition: transform 0.5s ease;
+}
+
+.Mbar.active {
+    transform: rotate(180deg);
+}
+
+
+
+</style>
+<style>
+    @media (max-width:768px){
+
+    .nav-links{
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+}
+
+
+     .nav-links{
+         z-index: 999;
+}
+    
+
+
+
+</style>
+
+
+
+<style>
+
+/* ===== LUXURY BLACK BACKGROUND ===== */
+body{
+    min-height:100vh;
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a, #000000);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Subtle gold glow overlay */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: radial-gradient(circle at top left, rgba(212,175,55,0.08), transparent 60%);
+    pointer-events:none;
+}
+
+/*===========================================================================*/
+
+body{
+    position: relative;
+    margin: 40px;
+    border: 3px solid #d4af37;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        inset 0 0 25px rgba(212,175,55,0.3);
+}
+
+/* Inner luxury thin line */
+body:before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:1px solid rgba(212,175,55,0.6);
+    pointer-events:none;
+}
+
+#a{
+    border: 4px solid #d4af37;
+    padding: 10px;
+    background: #111;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.6),
+        0 0 40px rgba(212,175,55,0.4);
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+/* Inner thin gold line */
+#a::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid rgba(212,175,55,0.5);
+}
+
+#a:hover{
+    transform: scale(1.01);
+    box-shadow:
+        0 0 30px rgba(212,175,55,0.9),
+        0 0 60px rgba(212,175,55,0.6);
+}
+
+
+/*===========================================================================*/
+
+/* ===== GOLD NAVBAR ===== */
+.navbar{
+    background: #111 !important;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 8px 25px rgba(212,175,55,0.25);
+}
+
+/* ===== NAV LINKS GOLD STYLE ===== */
+.nav-links a{
+    color:#d4af37 !important;
+    letter-spacing:1px;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:white !important;
+    text-shadow:0 0 10px #d4af37;
+}
+
+/* ===== MOBILE MENU LUXURY STYLE ===== */
+@media (max-width:768px){
+    .nav-links{
+        background:#111 !important;
+        border-top:1px solid #d4af37;
+        box-shadow:0 10px 25px rgba(0,0,0,0.6);
+    }
+
+
+      /* Gold Hamburger Menu */
+    .Mbar span{
+        background:#d4af37;
+
+    }
+
+    .home-hero{
+        margin:20px;
+}
+
+
+
+</style>
+
+
+
+
+
+     <nav class="navbar">
+         <div class="logo">
+               <a href="HOME.html" target="_self"><img src="Main logo 2.ico" alt="Logo"></a>
+         </div>
+                
+               <ul class="nav-links" id="navLinks">
+                        
+                       
+                       <li><a href="HOME.html" target="_self">HOME</a></li>
+                       <li><a href="QUALIFICATION.html" target="_self">QUALIFICATION</a></li>
+                       <li><a href="SKILLS.html" target="_self">SKILLS</a></li>
+                       <li><a href="SOCIAL MEDIA.html" target="_self">SOCIAL MEDIA</a></li>
+                       <li><a href="ABOUT.html" target="_self">ABOUT</a></li>
+                           
+              </ul>
+
+         </div>
+
+    <!-- Mbar -->
+    <div class="Mbar" id="Mbar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+
+
+     <hr style=" margin:5% auto; border: 1px solid black; margin-top: 0px; background: linear-gradient(to right, red, blue);">
+
+
+<script src="script.js"></script>
+
+
+
+<!--================Text,Image and Photos [Right-click disable , Image drag & drop block , Text selection disable]======-->
+
+<style>
+    body{
+       user-select: none;
+    }
+
+    img{
+       user-select: none;
+
+    }
+   
+    .securty{
+       pointer-events:auto;
+    }
+
+    .profile-img{
+        position: relative;
+    }
+
+    .profile-img::after{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+
+/*========================Only Mobile Security=====================================*/
+
+
+    img{
+        -webkit-user-drag: none;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    body{
+        -webkit-touch-callout: none; /* iPhone long press menu block */
+    }
+    
+    #a{
+       pointer-events:auto;
+    }
+/*==================================================================================*/
+
+
+</style>
+
+<script>
+    
+    document.addEventListener("dragstart", function(e){        /*Image drag & drop block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    });
+
+    
+
+    document.addEventListener("copy", function(e){             /*Image copy block (JS)*/
+        e.preventDefault();
+    });
+
+
+   
+    
+    document.addEventListener("keydown", function(e){          /*Screenshot block*/
+        if(e.key === "PrintScreen"){
+            alert("Screenshot disabled!");
+        }
+    });
+
+
+    
+    document.addEventListener("contextmenu", function(e){       /*Right-click disable*/
+        e.preventDefault();
+    });
+
+
+/*========================Only Mobile Security(JS)=====================================*/
+
+   
+    document.addEventListener("contextmenu", function(e){       /*Long-press (mobile) disable*/
+        e.preventDefault();
+    });
+
+
+    
+    document.addEventListener("touchstart", function(e){        /*Image drag + touch hold block*/
+        if(e.target.tagName === "IMG"){
+            e.preventDefault();
+        }
+    }, {passive:false});
+
+
+
+/*========================Only Mobile Security(JS) End=====================================*/
+
+/*=====================Exra secutity(JS)===================================================*/
+
+
+    setInterval(function(){
+        if(window.outerWidth - window.innerWidth > 160){         /*DevTools detect (extra layer)*/
+            document.body.innerHTML = "";
+        }
+    }, 1000);
+
+   
+
+    window.addEventListener("blur", function(){                 /*Blur screen when user switches focus*/
+        document.body.style.filter = "blur(20px)";
+    });
+
+    window.addEventListener("focus", function(){
+        document.body.style.filter = "blur(0)";
+    });
+
+
+
+    document.addEventListener("visibilitychange", function(){       /*Visibility change detect*/
+
+        if(document.hidden){
+            document.body.style.filter = "blur(25px)";
+        }else{
+            document.body.style.filter = "blur(0)";
+        }
+
+    });
+
+
+    
+    document.addEventListener("keydown", function(e){      /*Keyboard shortcuts block*/
+
+        /* Ctrl + C */
+        if(e.ctrlKey && e.key === "c"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + S */
+        if(e.ctrlKey && e.key === "s"){
+            e.preventDefault();
+        }
+
+        /* Ctrl + U (view source) */
+        if(e.ctrlKey && e.key === "u"){
+            e.preventDefault();
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+        }
+
+    });
+
+
+    
+    document.addEventListener("keydown", function(e){
+
+        /* Ctrl + U */
+        if(e.ctrlKey && (e.key === "u" || e.key === "U")){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        /* Ctrl + Shift + I */
+        if(e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")){
+            e.preventDefault();
+            return false;
+        }
+
+        /* F12 */
+        if(e.key === "F12"){
+            e.preventDefault();
+            return false;
+        }
+
+    });
+
+
+    window.onkeydown = function(e){
+
+        if(e.ctrlKey && e.keyCode === 85){ // U
+            return false;
+        }
+
+        if(e.keyCode === 123){ // F12
+            return false;
+        }
+
+    };
+
+
+/*=====================Exra secutity(JS) End===================================================*/
+</script>
+
+
+
+
+</head>
+
+<!--===================================================END Security=========================================================-->
+
+
+
+
+
+
+
+     
+</head>
+
+
+<!--======================================================================================================================================================-->
+
+<head>
+
+<style>
+
+        *{
+           margin:0;
+           padding:0;
+           box-sizing:border-box;
+           /*font-family:Arial, sans-serif;*/
+        }
+
+        body{
+           background:#000;
+           color:white;
+           overflow-x:hidden;
+        }
+
+        /* particles background */
+
+        #particles-js{
+           position:fixed;
+           width:100%;
+           height:100%;
+           z-index:-1;
+        }
+
+        /* section */
+
+        .skills{
+           padding:120px 20px;
+           text-align:center;
+        }
+
+        /* title */
+
+        .title{
+
+           font-size:60px;
+           letter-spacing:8px;
+           color:#D4AF37;
+
+           text-shadow:
+               0 0 10px #D4AF37,
+               0 0 20px #D4AF37,
+               0 0 40px rgba(212,175,55,0.5);
+
+           margin-bottom:80px;
+
+           animation:titleGlow 3s infinite alternate;
+        }
+
+
+        @keyframes titleGlow{
+
+                from{
+                   text-shadow:0 0 10px #D4AF37;
+                }
+
+                to{
+                  text-shadow:
+                  0 0 20px #D4AF37,
+                  0 0 40px #D4AF37;
+                }
+
+        }
+
+        /* grid */
+
+                .skills-grid{
+
+                    display:flex;
+                    flex-wrap:wrap;
+                    justify-content:center;
+                    gap:40px;
+                }
+
+        /* skill card */
+
+                .skill-card{
+
+                    width:220px;
+                    padding:25px;
+
+                    border-radius:20px;
+
+                    background:rgba(255,255,255,0.05);
+
+                    backdrop-filter:blur(12px);
+
+                    border:1px solid rgba(212,175,55,0.5);
+
+                    transition:0.5s;
+
+                    transform-style:preserve-3d;
+                }
+
+
+                .skill-card:hover{
+
+                    transform:rotateY(15deg) scale(1.1);
+
+                    box-shadow:0 0 40px rgba(212,175,55,0.8);
+                }
+
+
+        /* circle skill */
+
+                .circle{
+ 
+                    position:relative;
+
+                    width:150px;
+                    height:150px;
+
+                    margin:auto;
+                }
+
+
+                svg{
+
+                    width:150px;
+                    height:150px;
+
+                    transform:rotate(-90deg);
+                }
+
+
+                circle{
+
+                    fill:none;
+                    stroke:#222;
+                    stroke-width:10;
+                }
+
+
+                circle.progress{
+
+                    stroke:#D4AF37;
+
+                    stroke-dasharray:377;
+                    stroke-dashoffset:377;
+
+                    transition:2s;
+                }
+
+        /* number */
+
+                .number{
+
+                    position:absolute;
+
+                    top:50%;
+                    left:50%;
+
+                    transform:translate(-50%,-50%);
+
+                    font-size:26px;
+
+                    color:#D4AF37;
+
+                    font-weight:bold;
+                }
+
+
+
+        /* skill name */
+
+                h3{
+
+                    margin-top:15px;
+
+                    color:white;
+                }
+
+
+
+        /* other skills section */
+
+                .other-skills{
+
+                    margin-top:120px;
+                }
+
+
+                .other-grid{
+
+                   display:flex;
+                   flex-wrap:wrap;
+                   justify-content:center;
+                   gap:40px;
+                }
+
+        /* info cards */
+
+                .info-card{
+
+                    width:260px;
+
+                    padding:30px;
+
+                    border-radius:20px;
+
+                    background:rgba(255,255,255,0.05);
+
+                    border:1px solid rgba(212,175,55,0.5);
+               
+                    backdrop-filter:blur(10px);
+
+                    transition:0.5s;
+                }
+
+
+                .info-card:hover{
+
+                    transform:translateY(-10px) scale(1.05);
+
+                    box-shadow:0 0 35px rgba(212,175,55,0.8);
+                }
+
+            /* mobile */
+
+                @media(max-width:768px){
+
+                    .title{
+
+                        font-size:40px;
+                    }
+
+
+                   .skills-grid{
+
+                        flex-direction:column;
+                        align-items:center;
+                    }
+
+                    .other-grid{
+
+                        flex-direction:column;
+                        align-items:center;
+                    }
+
+                    .skill-card,
+                    .info-card{
+
+                        width:85%;
+                    }
+
+                }
+
+</style>
+
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+        <section class="skills">
+
+           <h1 class="title">CODING SKILLS</h1>
+
+                <div class="skills-grid">
+
+                    <!-- HTML -->
+
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="75">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">75%</div>
+
+                        </div>
+
+                    <h3>HTML</h3>
+
+                    </div>
+
+
+
+                    <!-- CSS -->
+               
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="60">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">60%</div>
+
+                        </div>
+
+                    <h3>CSS</h3>
+
+                    </div>
+
+
+                    <!-- JS -->
+
+
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="5">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">5%</div>
+
+                        </div>
+
+                    <h3>JavaScript</h3>
+
+                    </div>
+
+
+                    <!-- PHP -->
+
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="0">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">0%</div>
+
+                        </div>
+
+                    <h3>PHP</h3>
+
+                    </div>
+
+
+                    <!-- SQL -->
+
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="70">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">70%</div>
+
+                        </div>
+
+                    <h3>SQL</h3>
+
+                    </div>
+
+
+                    <!-- Python -->
+
+                    <div class="skill-card">
+
+                        <div class="circle" data-percent="80">
+
+                            <svg>
+
+                                <circle cx="70" cy="70" r="60"></circle>
+
+                                <circle cx="70" cy="70" r="60" class="progress"></circle>
+
+                            </svg>
+
+                            <div class="number">80%</div>
+
+                        </div>
+
+                    <h3>Python</h3>
+
+                    </div>
+
+                </div>
+
+
+                    <!-- other skills -->
+
+                        <div class="other-skills">
+
+                        <h1 class="title">OTHER SKILLS</h1>
+
+                            <div class="other-grid">
+
+                                <div class="info-card">
+
+                    <h3>Maths Knowledge</h3>
+
+                    <p>Strong logical thinking and problem solving ability.</p>
+
+                                </div>
+
+
+                                <div class="info-card">
+
+                    <h3>Web Designing</h3>
+
+                    <p>Modern responsive UI/UX website design.</p>
+
+                                </div>
+
+
+                                <div class="info-card">
+
+                    <h3>Video Editing</h3>
+
+                    <p>Creative editing for YouTube and social media.</p>
+
+                                </div>
+
+
+                                <div class="info-card">
+
+                    <h3>Photo Editing</h3>
+
+                    <p>Professional photo editing and AI design.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+        </section>
+
+
+
+
+<script>
+
+    const circles=document.querySelectorAll(".circle");
+
+    circles.forEach(circle=>{
+
+    let percent=circle.getAttribute("data-percent");
+
+    let progress=circle.querySelector(".progress");
+
+    let offset=377-(377*percent)/100;
+
+setTimeout(()=>{
+    progress.style.strokeDashoffset=offset;
+    },500);
+
+});
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+
+    particles:{
+
+    number:{value:60},
+
+    color:{value:"#D4AF37"},
+
+    shape:{type:"circle"},
+
+    opacity:{value:0.5},
+
+    size:{value:3},
+
+    move:{speed:1}
+
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rows{
+    display: flex;
+    justify-content: center;   /* center ekata gannawa */
+    margin-top: 20px;
+}
+
+.nav-links1{
+    display: flex;
+    list-style: none;
+    gap: 40px;                 /* icon athara space */
+    align-items: center;
+}
+
+.nav-links1 li img{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.nav-links1 li img:hover{
+    transform: scale(1.1);     /* hover effect */
+}
+
+@media (max-width: 768px){
+
+    .nav-links1{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+    .nav-links1 li img{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+</style>
+
+
+
+
+<style>
+
+    hr{
+      margin:-20px auto; 
+      border: 1px solid black blue;
+      background: linear-gradient(to right, red, blue); 
+      width: 600px;
+      align:center;
+          }
+    #a:hover{
+        transform: scale(1.01);
+    }
+
+
+@media(max-width:768px){
+    hr{
+      margin:-20px auto;
+      max-width: 160px; 
+      border:  solid black blue;
+      /*background: linear-gradient(to right, red, blue);*/
+      background-color: blue; 
+      width: 600px;
+      align:center;                                                                                 
+      }
+    
+}
+
+
+
+
+</style>
+
+
+<hr>
+   </hr>
+
+
+<br><br><br>
+
+
+<div class="rows">
+    <ul class="nav-links1">
+
+        <li>
+            <a href="https://www.youtube.com/channel/UCvKT6kF8P-Lq5AlGDDDvbVQ" target="_blank">
+                <img src="YT.ico" alt="YouTube" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="W.ico" alt="WhatsApp" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://facebook.com/" target="_blank">
+                <img src="FB.ico" alt="Facebook" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://tiktok.com/" target="_blank">
+                <img src="TT.ico" alt="TikTok" style="border-radius: 5000px;" id="a">
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<br><br>  
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
